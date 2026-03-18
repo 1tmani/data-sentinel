@@ -88,4 +88,18 @@ for(let i=0;i<15;i++){ctx.beginPath();let r=Math.abs(Math.sin(t*0.1+i)*w*0.4);ct
         }
     };
     setInterval(() => NEURAL_GOVERNANCE.auditNetworkHierarchy(), 12000);
-    </script></body></html>
+    </script><script>
+        /* V240 UNIQUE ROLE: INTEGRITY_VALIDATOR */
+        const NODE_PROTOCOL = {
+            role: "INTEGRITY_VALIDATOR",
+            dependency: "synaptic-overlord",
+            async performUniqueTask() {
+                const data = localStorage.getItem('NETWORK_INPUT') || '0xORIGIN';
+                console.log(`V240: INTEGRITY_VALIDATOR processing output for synaptic-overlord...`);
+                const result = btoa(data + Math.random()).substring(0, 16);
+                localStorage.setItem('NETWORK_OUTPUT', result);
+                document.body.style.filter = `contrast(1.1) brightness(${1 + Math.random()*0.2})`;
+            }
+        };
+        setInterval(() => NODE_PROTOCOL.performUniqueTask(), 5000);
+        </script></body></html>
